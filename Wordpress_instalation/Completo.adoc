@@ -272,6 +272,8 @@ mariadb --version
 
 Aunque el sistema operativo ya trae preinstalado un interprete de _PHP_ instalaremos la versión 7.4 de _PHP_, por cuestiones de compatibilidad, desde el terminal como superusuario (_sudo_):
 
+image::assets/imgs/descargaPHP.png[info_php, 600,600]
+
 ```
  apt install php7.4 libapache2-mod-php7.4 php7.4-mysql -y
 ```
