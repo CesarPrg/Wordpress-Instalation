@@ -270,10 +270,12 @@ mariadb --version
 
 ### 1.5. Instalación de PHP.
 
-Aunque el sistema operativo ya trae preinstalado un interprete de _PHP_ instalaremos la versión 7.4 de _PHP_, por cuestiones de compatibilidad, desde el terminal como superusuario (_sudo_):
+Aunque el sistema operativo ya trae preinstalado un interprete de _PHP_ instalaremos la última versión estable de linux en la web oficial https://www.php.net/downloads, debemos acordarnos que debe acabar en *.tar.gz*, descargamos el archivo php-8.1.16.tar.gz y lo descomprimimos para poder instalarlo:
 
+image::assets/imgs/descargasPHP.png[info_php, 600,600]
 ```
- apt install php7.4 libapache2-mod-php7.4 php7.4-mysql -y
+ sudo apt install php8.1 libapache2-mod-php8.1 php8.1-mysql php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline
+
 ```
 Para asegurarnos un correcto funcionamiento de _WordPress_ necesitamos la instalación de algunos módulos adicionales:
 
@@ -283,7 +285,7 @@ Para asegurarnos un correcto funcionamiento de _WordPress_ necesitamos la instal
 ```
 Y los habilitaremos con:
 ```
- a2enmod php7.4
+ a2enmod php8.1
 ```
 Una vez finalizada la instalación reiniciamos el servicio de _Apache HTTP Server_:
 
@@ -293,9 +295,7 @@ Una vez finalizada la instalación reiniciamos el servicio de _Apache HTTP Serve
 En el caso de _PHP_ crearemos un archivo con la finalidad de comprobar si funciona correctamente el _package_ instalado y le insertaremos el código:
 
 ```
- cd /
- cd var/www/html/
- nano info.php
+ sudo nano /var/www/html/info.php
 ```
 image::assets/imgs/info_php.png[info_php, 600,600]
 
